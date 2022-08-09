@@ -1,0 +1,58 @@
+{
+  "name": "markdown-code-block-meta",
+  "version": "0.0.0",
+  "description": "A library to parse/stringify metadata of markdown code block",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "keywords": [
+    "code-block",
+    "key-value",
+    "markdown",
+    "meta",
+    "metadata",
+    "pair",
+    "remark"
+  ],
+  "homepage": "https://github.com/nice-move/markdown-code-block-meta",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nice-move/markdown-code-block-meta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nice-move/markdown-code-block-meta/issues"
+  },
+  "main": "index.js",
+  "files": [],
+  "type": "module",
+  "scripts": {
+    "lint:staged": "nice-move lint staged",
+    "prepare": "nice-move git hooks",
+    "prepublishOnly": "npm run lint:staged && npm test",
+    "test": "ava --fail-fast"
+  },
+  "devDependencies": {
+    "@bring-it/npm": "^0.0.3",
+    "@nice-move/cli": "^0.9.8",
+    "@nice-move/eslint-config-base": "^0.8.5",
+    "@nice-move/prettier-config": "^0.7.1",
+    "ava": "^4.3.1",
+    "eslint": "^8.21.0",
+    "eslint-plugin-ava": "^13.2.0",
+    "garou": "^0.5.0",
+    "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": "^16.13.0 || >=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "eslintConfig": {
+    "extends": "@nice-move/eslint-config-base"
+  },
+  "prettier": "@nice-move/prettier-config"
+}
