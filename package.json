@@ -1,6 +1,6 @@
 {
   "name": "markdown-code-block-meta",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "A library to parse/stringify metadata of markdown code block",
   "license": "MIT",
   "author": {

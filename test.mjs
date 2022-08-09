@@ -40,4 +40,5 @@ test('getValue', (t) => {
   t.is('123', getValue('`123`'));
   t.is('123', getValue("'123'"));
   t.is('123', getValue("'123'"));
+  t.is('123"', getValue('123"'));
 });

@@ -20,5 +20,5 @@ export function stringify(object) {
 }
 
 export function getValue(string) {
-  return string.match(/(["'`])(?<value>.*?)\1/)?.groups?.value;
+  return string?.match?.(/(["'`])(?<value>.*?)\1/)?.groups?.value ?? string;
 }
