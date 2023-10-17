@@ -30,29 +30,34 @@
   "scripts": {
     "lint:staged": "nice-move lint staged",
     "prepare": "nice-move git hooks",
-    "prepublishOnly": "npm run lint:staged && npm test",
+    "prepublishOnly": "pnpm run lint:staged && pnpm test",
+    "snapshot": "ava --fail-fast -u",
     "test": "ava --fail-fast"
   },
   "devDependencies": {
-    "@bring-it/npm": "^0.0.3",
-    "@nice-move/cli": "^0.9.8",
-    "@nice-move/eslint-config-base": "^0.8.5",
-    "@nice-move/prettier-config": "^0.7.1",
-    "ava": "^4.3.1",
-    "eslint": "^8.21.0",
-    "eslint-plugin-ava": "^13.2.0",
-    "garou": "^0.5.0",
-    "prettier": "^2.7.1"
+    "@bring-it/npm": "^0.3.5",
+    "@nice-move/cli": "^0.10.13",
+    "@nice-move/eslint-config-base": "^0.9.22",
+    "@nice-move/prettier-config": "^0.9.6",
+    "ava": "^5.3.1",
+    "eslint": "^8.51.0",
+    "eslint-plugin-ava": "^14.0.0",
+    "garou": "^0.6.17",
+    "prettier": "^3.0.3"
   },
   "engines": {
-    "node": "^16.13.0 || >=18.0.0"
+    "node": "^16.15.0 || ^18.12.0"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "packageManager": "pnpm@8.8.0",
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"
+  },
+  "nice-move": {
+    "import-groups": "nice-move-preset"
   },
   "prettier": "@nice-move/prettier-config"
 }

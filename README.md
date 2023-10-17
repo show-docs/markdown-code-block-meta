@@ -70,5 +70,6 @@ getValue("'abc'"); // abc
 
 ## Related
 
-- [remark-kroki](https://github.com/nice-move/remark-kroki)
 - [remark-code-example](https://github.com/nice-move/remark-code-example)
+- [remark-kroki](https://github.com/nice-move/remark-kroki)
+- [remark-docusaurus](https://github.com/nice-move/remark-docusaurus)
