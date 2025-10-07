@@ -1,11 +1,10 @@
 {
   "name": "markdown-code-block-meta",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A library to parse/stringify metadata of markdown code block",
   "license": "MIT",
   "author": {
-    "name": "Eric Chen",
-    "email": "airkro@qq.com"
+    "name": "Eric Chen"
   },
   "keywords": [
     "code-block",
@@ -19,45 +18,46 @@
   "homepage": "https://github.com/nice-move/markdown-code-block-meta",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nice-move/markdown-code-block-meta.git"
+    "url": "git+https://github.com/nice-move/markdown-code-block-meta.git"
   },
   "bugs": {
     "url": "https://github.com/nice-move/markdown-code-block-meta/issues"
   },
   "main": "index.js",
-  "files": [],
+  "files": [
+    "index.d.ts"
+  ],
   "type": "module",
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
     "lint:staged": "nice-move lint staged",
+    "lint:type": "tsc -p tsconfig.json",
     "prepare": "nice-move git hooks",
-    "prepublishOnly": "pnpm run lint:staged && pnpm test",
+    "prepublishOnly": "pnpm run lint:staged && pnpm test && pnpm run build",
     "snapshot": "ava --fail-fast -u",
     "test": "ava --fail-fast"
   },
   "devDependencies": {
-    "@bring-it/npm": "^0.3.5",
-    "@nice-move/cli": "^0.10.13",
-    "@nice-move/eslint-config-base": "^0.9.22",
-    "@nice-move/prettier-config": "^0.9.6",
-    "ava": "^5.3.1",
-    "eslint": "^8.51.0",
-    "eslint-plugin-ava": "^14.0.0",
-    "garou": "^0.6.17",
-    "prettier": "^3.0.3"
+    "@bring-it/npm": "^0.9.0",
+    "@nice-move/all-in-base": "^0.6.18",
+    "ava": "^6.4.1",
+    "eslint": "^9.37.0",
+    "garou": "^0.9.15",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
   },
+  "packageManager": "pnpm@10.18.1",
   "engines": {
-    "node": "^16.15.0 || ^18.12.0"
+    "node": ">=20.0.0"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "packageManager": "pnpm@8.8.0",
-  "eslintConfig": {
-    "extends": "@nice-move/eslint-config-base"
-  },
-  "nice-move": {
-    "import-groups": "nice-move-preset"
+  "ava": {
+    "extensions": [
+      "mts"
+    ]
   },
   "prettier": "@nice-move/prettier-config"
 }
