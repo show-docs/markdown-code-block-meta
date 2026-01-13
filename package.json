@@ -1,6 +1,6 @@
 {
   "name": "markdown-code-block-meta",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A library to parse/stringify metadata of markdown code block",
   "license": "MIT",
   "author": {
@@ -15,13 +15,13 @@
     "pair",
     "remark"
   ],
-  "homepage": "https://github.com/nice-move/markdown-code-block-meta",
+  "homepage": "https://github.com/show-docs/markdown-code-block-meta",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nice-move/markdown-code-block-meta.git"
+    "url": "git+https://github.com/show-docs/markdown-code-block-meta.git"
   },
   "bugs": {
-    "url": "https://github.com/nice-move/markdown-code-block-meta/issues"
+    "url": "https://github.com/show-docs/markdown-code-block-meta/issues"
   },
   "main": "index.js",
   "files": [
@@ -30,25 +30,27 @@
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
+    "lint:eslint": "eslint . --quiet --fix --concurrency=auto",
     "lint:staged": "nice-move lint staged",
     "lint:type": "tsc -p tsconfig.json",
     "prepare": "nice-move git hooks",
-    "prepublishOnly": "pnpm run lint:staged && pnpm test && pnpm run build",
+    "prepublishOnly": "pnpm run lint:staged && pnpm run lint:type && pnpm test && pnpm run build",
     "snapshot": "ava --fail-fast -u",
     "test": "ava --fail-fast"
   },
   "devDependencies": {
-    "@bring-it/npm": "^0.9.0",
-    "@nice-move/all-in-base": "^0.6.18",
+    "@bring-it/npm": "^0.9.3",
+    "@nice-move/all-in-base": "^0.6.31",
     "ava": "^6.4.1",
-    "eslint": "^9.37.0",
-    "garou": "^0.9.15",
-    "prettier": "^3.6.2",
-    "typescript": "^5.9.3"
+    "eslint": "^9.39.2",
+    "garou": "^0.9.17",
+    "prettier": "~3.7.4",
+    "typescript": "~5.9.3"
   },
-  "packageManager": "pnpm@10.18.1",
+  "packageManager": "pnpm@10.28.0",
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.0.0",
+    "pnpm": "^10.28.0"
   },
   "publishConfig": {
     "access": "public",

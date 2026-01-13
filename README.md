@@ -8,7 +8,7 @@ A library to parse/stringify metadata of markdown code block.
 
 [npm-url]: https://www.npmjs.com/package/markdown-code-block-meta
 [npm-badge]: https://img.shields.io/npm/v/markdown-code-block-meta.svg?style=flat-square&logo=npm
-[github-url]: https://github.com/nice-move/markdown-code-block-meta
+[github-url]: https://github.com/show-docs/markdown-code-block-meta
 [github-badge]: https://img.shields.io/npm/l/markdown-code-block-meta.svg?style=flat-square&colorB=blue&logo=github
 [node-badge]: https://img.shields.io/node/v/markdown-code-block-meta.svg?style=flat-square&colorB=green&logo=node.js
 
@@ -70,6 +70,6 @@ getValue("'abc'"); // abc
 
 ## Related
 
-- [remark-code-example](https://github.com/nice-move/remark-code-example)
-- [remark-kroki](https://github.com/nice-move/remark-kroki)
-- [remark-docusaurus](https://github.com/nice-move/remark-docusaurus)
+- [remark-code-example](https://github.com/show-docs/remark-code-example)
+- [remark-kroki](https://github.com/show-docs/remark-kroki)
+- [remark-docusaurus](https://github.com/show-docs/remark-docusaurus)
